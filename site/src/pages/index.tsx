@@ -43,14 +43,26 @@ export default function Home(): JSX.Element {
             </div>
             <h2 className='font-thin mt-[5rem] mb-[1.5rem]'>Keyboard Firmware Powered By Python</h2>
             <div className="flex items-center">
-              <button className="btn btn-success btn-outline mr-4">
-                <a className='link no-underline' href="#">
+              <Link
+
+                to="/docs/Getting_Started/">
+                <button className="btn btn-success btn-outline mr-4">
+
                   Getting Started
-                </a>
-              </button>
-              <button className="btn btn-outline mr-4">
-                Compatible Controllers
-              </button>
+
+                </button>
+              </Link>
+
+              <Link
+
+                to="/docs/Officially_Supported_Microcontrollers/">
+                <button className="btn btn-outline mr-4">
+
+                  Compatible Controllers
+                </button>
+
+              </Link>
+
               <iframe src="https://ghbtns.com/github-btn.html?user=KMKfw&repo=kmk_firmware&type=star&count=true" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 
             </div>
@@ -75,8 +87,12 @@ export default function Home(): JSX.Element {
                       <PegLogo />
                     </div>
                     <div className="flex flex-1 ml-[4rem]">
-                      <button className="btn btn-sm btn-outline btn-success">Download</button>
-                      <button className="btn btn-sm btn-outline ml-2">Learn More</button>
+                      <a href="https://peg.software/" target="_blank" rel="noopener noreferrer" className="flex w-full">
+                        <button className="btn btn-sm btn-outline btn-success">Download</button>
+                      </a>
+                      <a href="https://peg.software/" target="_blank" rel="noopener noreferrer" className="flex w-full">
+                        <button className="btn btn-sm btn-outline ml-2">Learn More</button>
+                      </a>
                     </div>
                   </div>
                   <div className="flex flex-col mt-[2rem] justify-between w-full">
@@ -142,7 +158,7 @@ export default function Home(): JSX.Element {
                       </div>
                       <div className="flex items-center mr-4">
 
-                        <a className='text-[.9rem]' href='#' style={{ color: 'var(--ifm-color-primary-lighter)' }}>See All</a>
+                        <a className='text-[.9rem]' href='https://peg.software/features' style={{ color: 'var(--ifm-color-primary-lighter)' }}>See All</a>
                       </div>
                     </div>
                     {/* <div className="link link-primary mt-1">View All Peg Features</div> */}
@@ -152,7 +168,9 @@ export default function Home(): JSX.Element {
                     <div className="flex w-full">
                       <div className="flex flex-col items-start px-[2rem]">
                         <p className='mb-1'>Out Of The Box Functionality</p>
-                        <button className='btn btn-sm btn-outline'>Learn More</button>
+                        <a href="https://boardsource.xyz/store/628b95b494dfa308a6581622" target="_blank" rel="noopener noreferrer">
+                          <button className='btn btn-sm btn-outline'>Learn More</button>
+                        </a>
                       </div>
                       <div className="flex h-[3.75rem]">
                         <BlokLogo />
