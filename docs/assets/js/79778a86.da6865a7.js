@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[9131],{9626:function(e){e.exports=JSON.parse('{"label":"hola","permalink":"/kmk_website/blog/tags/hola","allTagsPath":"/kmk_website/blog/tags","count":1}')}}]);

@@ -28,14 +28,9 @@ module.exports = {
   plugins: [require("daisyui")],
   corePlugins: { preflight: false },
   important: '#tailwind',
-  // daisyui: {
-  //   themes: [
-  //     {
-  //       light: {
-  //         ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-  //         primary: "#845eff",
-  //       },
-  //     },
-  //   ],
-  // },
+  daisyui: {
+    themes: [
+      'light', 'dark'
+    ],
+  },
 };

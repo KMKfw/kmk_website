@@ -146,6 +146,19 @@ a:hover {
   text-decoration: none;
 }
 
+.footer__links {
+  width: 100%
+}
+
+.footer>.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__bottom {
+  align-self: center;
+}
+
 /* table,
 thead,
 tbody,

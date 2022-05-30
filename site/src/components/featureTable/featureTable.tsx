@@ -81,14 +81,14 @@ export default function FeatureTable(): JSX.Element {
           zmk: false,
         },
         {
-          name: 'Encoders full support',
+          name: 'Rotary Encoder Support',
           status: Status.complete,
           kmk: true,
           qmk: true,
           zmk: false,
         },
         {
-          name: 'Oled Display',
+          name: 'OLED Display Support',
           status: Status.complete,
           kmk: true,
           qmk: true,
@@ -107,6 +107,13 @@ export default function FeatureTable(): JSX.Element {
       category: 'Off The Wall Features',
       individualFeatures: [
         {
+          name: 'PEG Compatible',
+          status: Status.complete,
+          kmk: true,
+          qmk: false,
+          zmk: false,
+        },
+        {
           name: 'CapsWord',
           status: Status.complete,
           kmk: true,
@@ -114,14 +121,14 @@ export default function FeatureTable(): JSX.Element {
           zmk: false,
         },
         {
-          name: 'Ctrl GUI Swap',
+          name: 'CTRL GUI Swap',
           status: Status.complete,
           kmk: true,
           qmk: false,
           zmk: false,
         },
         {
-          name: 'ADNS9800 optical sensor',
+          name: 'ADNS9800 Optical Sensor',
           status: Status.complete,
           kmk: true,
           qmk: false,
@@ -197,11 +204,14 @@ export default function FeatureTable(): JSX.Element {
   }
   return (
     <div className="flex flex-col w-full">
-      <div className="flex items-center align-center mb-3">
-        <div className='flex text-[1.25rem] font-sans mr-[1rem]'>Legend</div>
-        <div className='flex mr-[1rem]'>{checkMarkIcon}<span className='ml-1'>Supported</span></div>
-        <div className='flex mr-[1rem]'>{terminalIcon}<span className='ml-1'>Under Development</span></div>
-        <div className='flex mr-[1rem]'>{lightBulbIcon}<span className='ml-1'>Future Feature</span></div>
+      <div className="flex flex-col sm:flex-row sm:items-center align-center mb-3">
+        <div className='flex text-[1.25rem] font-sans mr-[1rem] mb-1.5 sm:mb-0'>Legend</div>
+        <div className="flex flex-wrap">
+          <div className='flex mr-[1rem] text-[1rem]'>{checkMarkIcon}<span className='ml-1'>Supported</span></div>
+          <div className='flex mr-[1rem] text-[1rem]'>{terminalIcon}<span className='ml-1'>Under Development</span></div>
+          <div className='flex mr-[1rem] text-[1rem]'>{lightBulbIcon}<span className='ml-1'>Future Feature</span></div>
+        </div>
+
       </div>
       <table
         className="table table-compact w-full">
