@@ -45,20 +45,6 @@
   border: none;
 }
 
-table th,
-table td,
-thead {
-  --ifm-table-border-width: '0px';
-  --ifm-table-border-color: 'red';
-  --ifm-table-cell-padding: '0px';
-  /* border: 0px */
-  --ifm-table-stripe-background: none;
-}
-
-.table-compact td {
-  padding: .3rem !important;
-}
-
 pre {
   overflow-x: auto;
   display: block;
@@ -76,15 +62,36 @@ pre>code {
   white-space: inherit;
 }
 
+
+table th,
+table td,
+tr,
+thead {
+  --ifm-table-border-width: unset;
+  /* --ifm-table-border-color: 'red'; */
+  /* --ifm-table-cell-padding: '0px'; */
+  /* border-top: none !important; */
+  border: 0px;
+  --ifm-table-stripe-background: none;
+  white-space: normal !important;
+}
+
+/* .table-compact td {
+  padding: .3rem !important;
+} */
+
 /* 
 .pegContainer {
   max-width: 1000px;
 } */
 
 
+
+
 h1 {
+  /* font-family: 'Quicksand', sans-serif; */
   padding: 0px;
-  margin: 0px;
+  margin: 0;
 }
 
 h2 {
@@ -117,14 +124,34 @@ p {
   padding: 0px;
 }
 
+
 button {
   border: 0px solid transparent
 }
 
-a {
+/* a {
   color: unset
 }
 
 a:hover {
   color: currentColor;
+} */
+
+.tw-btn a {
+  color: unset
 }
+
+.tw-btn a:hover {
+  color: unset;
+  text-decoration: none;
+}
+
+/* table,
+thead,
+tbody,
+tfoot,
+th,
+td,
+tr {
+  all: unset;
+} */

@@ -7,25 +7,8 @@ import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import PegLogo from '../components/images/peg_logo'
 import BlokLogo from '../components/images/blok_logo'
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import FeatureTable from '../components/featureTable/featureTable';
+import ShareIcon from '../components/images/share_icon'
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -36,84 +19,94 @@ export default function Home(): JSX.Element {
       description="Keyboard Firmware Powered By Python">
       {/* <HomepageHeader /> */}
       <div id="tailwind">
-        <div className="bg-base-200">
-          <div className="container flex flex-col w-full items-center py-[8rem]">
-            <div className="w-[50%]">
-              <img src="./img/kmk_logo.svg" alt="kmk logo" />
-            </div>
-            <h2 className='font-thin mt-[5rem] mb-[1.5rem]'>Keyboard Firmware Powered By Python</h2>
-            <div className="flex items-center">
-              <Link
-
-                to="/docs/Getting_Started/">
-                <button className="btn btn-success btn-outline mr-4">
-
-                  Getting Started
-
-                </button>
-              </Link>
-
-              <Link
-
-                to="/docs/Officially_Supported_Microcontrollers/">
-                <button className="btn btn-outline mr-4">
-
-                  Compatible Controllers
-                </button>
-
-              </Link>
-
-              <iframe src="https://ghbtns.com/github-btn.html?user=KMKfw&repo=kmk_firmware&type=star&count=true" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-
+        <main>
+          <div className="bg-base-200">
+            <div className="container flex flex-col w-full items-center py-[8rem]">
+              <div className="w-[50%]">
+                <img src="./img/kmk_logo.svg" alt="kmk logo" />
+              </div>
+              <h2 className='font-thin mt-[5rem] mb-[1.5rem]'>Keyboard Firmware Powered By Python</h2>
+              <div className="flex items-center">
+                <Link
+                  to="/docs/Getting_Started/">
+                  <button className="btn btn-success btn-outline mr-4">
+                    Getting Started
+                  </button>
+                </Link>
+                <Link
+                  to="/docs/Officially_Supported_Microcontrollers/">
+                  <button className="btn btn-outline mr-4">
+                    Compatible Controllers
+                  </button>
+                </Link>
+                <iframe src="https://ghbtns.com/github-btn.html?user=KMKfw&repo=kmk_firmware&type=star&count=true" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+              </div>
             </div>
           </div>
-        </div>
+          <div className="sticky-top top-0 bg-gray-700" data-theme='dark'>
+            <div className="container flex justify-around">
+              <div className="flex flex-col py-[1.5rem]">
+                <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Official Flashing Program</h3>
+                <div className="flex w-[8.5rem]">
+                  <a className='flex' href="#">
+                    <PegLogo />
+                    <span className="ml-1">
+                      <ShareIcon />
+                    </span>
+                  </a>
 
-        <main>
-          <div className="">
-            <div className="container flex flex-col py-[6rem]">
-              {/* <div className="w-[50%]">
-                <img src="./img/kmk_logo_skeleton_k.svg" alt="" />
+                </div>
+              </div>
+              <div className="flex flex-col justify-center py-[1rem]">
+                <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Works Out of The Box</h3>
+                <div className="flex w-[7.5rem]">
+                  <a className='flex' href="#">
+                    <BlokLogo />
+                    <span className="ml-1">
+                      <ShareIcon />
+                    </span>
+                  </a>
+
+                </div>
+              </div>
+              {/* <div className="flex items-center py-[1rem]">
+                <button className='btn btn-outline outline outline-[white] outline-1 outline-solid'><a className='link text-white no-underline' href="#">View All Compatible Devices</a></button>
               </div> */}
-              <div className="gap-[6rem] flex w-full">
-                <div className="flex flex-col items-start flex-1">
-                  <div className="flex flex-col">
-                    <h3 className='font-light text-[3.5rem] mb-2' style={{ color: 'var(--ifm-color-primary-lighter)' }}>The easiest to use keyboard firmware.</h3>
-                    <h4 className='text-left mb-10 font-light text-[1.2rem] max-w-[80%]'>Setup your board and create your keymap from within an easy to use GUI. No programming knowledge required. Peg will handle the KMK for you.</h4>
-                  </div>
 
-                  <div className="flex w-full items-center">
-                    <div className="flex flex-col w-[35%]">
+            </div>
+
+          </div>
+          <div className="">
+            <div className="container mx-auto pt-[5rem]">
+              <h3 className='text-center font-light text-[3.5rem] mb-[3rem] font-sans' style={{ color: 'var(--ifm-color-primary-lighter)' }}>
+                Features
+              </h3>
+              <FeatureTable />
+
+            </div>
+
+            {/* <div className="container flex flex-col py-[6rem]">
+              <div className="flex w-full">
+                <div className="flex flex-col items-start flex-1 mr-[5rem]">
+                  <div className="flex flex-col">
+                    <h3 className='font-light text-[3.5rem] mb-2 font-sans' style={{ color: 'var(--ifm-color-primary-lighter)' }}>The easiest to use keyboard firmware.</h3>
+                    <h4 className='text-left font-light text-[1.2rem] max-w-[80%]'>Setup your board and create your keymap from within an easy to use GUI. No programming knowledge required. Peg will handle the KMK for you.</h4>
+                  </div>
+                  <div className="flex w-full items-center mt-[3rem] mb-[1.5rem]">
+                    <div className="flex flex-col w-[30%]">
                       <PegLogo />
                     </div>
-                    <div className="flex flex-1 ml-[4rem]">
+                    <div className="flex ml-[2rem]">
                       <a href="https://peg.software/" target="_blank" rel="noopener noreferrer" className="flex w-full">
                         <button className="btn btn-sm btn-outline btn-success">Download</button>
                       </a>
                       <a href="https://peg.software/" target="_blank" rel="noopener noreferrer" className="flex w-full">
-                        <button className="btn btn-sm btn-outline ml-2">Learn More</button>
+                        <button className="btn btn-sm btn-outline ml-[1rem]">Learn More</button>
                       </a>
                     </div>
                   </div>
-                  <div className="flex flex-col mt-[2rem] justify-between w-full">
-                    <div className="flex flex">
-                      <div className="flex flex-col">
-                        <div className="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-[2.5rem] w-[2.5rem] stroke-base-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="" stroke-width="1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          <p>Guided New Board Setup</p>
-                        </div>
-                        <div className="flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-[2.5rem] w-[2.5rem] stroke-base-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="" stroke-width="1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          <p>No Programming Knowledge Required</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap mt-3 ml-[.55rem] w-full">
+                  <div className="flex flex-col justify-between w-full">
+                    <div className="flex flex-wrap mt-3 ml-[.55rem] ">
                       <div className="flex items-center mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-[1.25rem] mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
@@ -161,24 +154,21 @@ export default function Home(): JSX.Element {
                         <a className='text-[.9rem]' href='https://peg.software/features' style={{ color: 'var(--ifm-color-primary-lighter)' }}>See All</a>
                       </div>
                     </div>
-                    {/* <div className="link link-primary mt-1">View All Peg Features</div> */}
                   </div>
-                  <div className="flex flex-1 w-full items-center justify-start pl-[3.5rem] pt-[2rem]">
-                    <div className="line h-full w-[.15rem] rounded rounded-full bg-base-content"></div>
+                  <div className="flex w-full items-center justify-start mt-[1.5rem] pl-[3.5rem] w-full">
+                    <div className="line h-full w-[.1rem] rounded rounded-full bg-base-content"></div>
                     <div className="flex w-full">
-                      <div className="flex flex-col items-start px-[2rem]">
-                        <p className='mb-1'>Out Of The Box Functionality</p>
+                      <div className="flex flex-col justify-center w-[15rem] ml-3">
+                        <p className='mb-1'>Out of The Box Functionality</p>
                         <a href="https://boardsource.xyz/store/628b95b494dfa308a6581622" target="_blank" rel="noopener noreferrer">
                           <button className='btn btn-sm btn-outline'>Learn More</button>
                         </a>
                       </div>
-                      <div className="flex h-[3.75rem]">
+                      <div className="flex w-[8rem]">
                         <BlokLogo />
                       </div>
                     </div>
-
                   </div>
-
                 </div>
                 <div className="flex flex-col flex-1 max-w-[50%]">
                   <div className="mockup-code flex flex-col flex-1">
@@ -206,48 +196,21 @@ export default function Home(): JSX.Element {
 
 
                   </div>
-                  {/* <div className="w-full"> */}
 
-                  {/* </div> */}
 
                 </div>
 
               </div>
 
 
-              {/* <div className="flex">
-                <div className="flex flex-col">
-                  <div className="flex items-center mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-[3rem] w-[2.5rem] stroke-base-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="" stroke-width="1">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <h4 className='font-light text-[1.3rem]'>Get Up and Running Quickly</h4>
-                  </div>
+          
+            </div> */}
 
-                </div>
-              </div> */}
-              {/* <p>KMK is extremely easy to use, no matter your experience level.</p> */}
 
-              {/* <div className="mt-3 gap-20 flex w-full bg-red-200">
-                <div className="flex flex-col flex-1">
-                  <h4 className='text-[1.2rem] font-normal'>No Experience Required</h4>
-                  <div className="w-[60%]">
-                    <PegLogo />
-                  </div>
 
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt neque et voluptates dolor eos! Corrupti natus similique eligendi fuga consequuntur odio vel, hic sequi nesciunt vero reprehenderit in iste nostrum?</p>
-                </div>
-                <div className="flex flex-col flex-1">
-                  <h4 className='text-[1.2rem] font-normal'>Advanced Users</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt neque et voluptates dolor eos! Corrupti natus similique eligendi fuga consequuntur odio vel, hic sequi nesciunt vero reprehenderit in iste nostrum?</p>
-                </div>
-              </div> */}
-            </div>
-            <div className="container mx-auto pt-[5rem]">
-              <h3 className='text-center font-light text-[3.5rem] mb-2' style={{ color: 'var(--ifm-color-primary-lighter)' }}>
-                Features
-              </h3>
-            </div>
+
+
+
           </div>
           {/* <HomepageFeatures /> */}
         </main>
