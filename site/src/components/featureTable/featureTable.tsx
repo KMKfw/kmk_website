@@ -1,57 +1,149 @@
 import React from 'react';
 
+enum Status {
+  complete,
+  underDevelopment,
+  planned
+}
+
 export default function FeatureTable(): JSX.Element {
   const featureList = [
     // individual feature status can be 'complete', 'underDevelopment', or 'planned', sorry i don't know how to use ENUMS
     {
-      category: 'Keyboard Functions',
+      category: 'Keyboard Connectivity',
       individualFeatures: [
         {
-          name: 'Map Keys',
-          status: 'complete',
+          name: 'USB Connectivity',
+          status: Status.complete,
           kmk: true,
           qmk: true,
           zmk: true,
         },
         {
-          name: 'Map Keys',
-          status: 'underDevelopment',
+          name: 'BLE Connectivity',
+          status: Status.complete,
           kmk: true,
           qmk: false,
+          zmk: true,
+        },
+        {
+          name: 'Split BLE Connectivity',
+          status: Status.complete,
+          kmk: true,
+          qmk: false,
+          zmk: true,
+        }
+      ]
+    },
+    {
+      category: 'Keyboard Features',
+      individualFeatures: [
+        {
+          name: 'Keymaps and Layers',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
+          zmk: true,
+        },
+        {
+          name: 'Tap-Dance',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
+          zmk: true,
+        },
+        {
+          name: 'Combos',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
+          zmk: true,
+        },
+        {
+          name: 'Macros',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
+          zmk: true,
+        },
+        {
+          name: 'One Shot Keys',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
+          zmk: true,
+        },
+        {
+          name: 'Mouse Keys',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
           zmk: false,
         },
         {
-          name: 'Map Keys',
-          status: 'planned',
+          name: 'Encoders full support',
+          status: Status.complete,
           kmk: true,
-          qmk: false,
+          qmk: true,
+          zmk: false,
+        },
+        {
+          name: 'Oled Display',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
+          zmk: false,
+        },
+        {
+          name: 'RGB Matrix',
+          status: Status.complete,
+          kmk: true,
+          qmk: true,
           zmk: false,
         }
       ]
     },
     {
-      category: 'BLE',
+      category: 'Off The Wall Features',
       individualFeatures: [
         {
-          name: 'Shoot Lines',
-          status: 'complete',
-          qmk: true,
-          zmk: true,
-        },
-        {
-          name: 'Send V1 (Outside)',
-          status: 'underDevelopment',
+          name: 'CapsWord',
+          status: Status.complete,
+          kmk: true,
           qmk: false,
           zmk: false,
         },
         {
-          name: 'Bubbles Sister',
-          status: 'planned',
+          name: 'Ctrl GUI Swap',
+          status: Status.complete,
+          kmk: true,
+          qmk: false,
+          zmk: false,
+        },
+        {
+          name: 'ADNS9800 optical sensor',
+          status: Status.complete,
+          kmk: true,
+          qmk: false,
+          zmk: false,
+        },
+        {
+          name: 'Pimoroni Trackball',
+          status: Status.complete,
+          kmk: true,
           qmk: true,
           zmk: false,
-        }
+        },
+        {
+          name: 'Run Any Code With Keypress',
+          status: Status.complete,
+          kmk: true,
+          qmk: false,
+          zmk: false,
+        },
+
       ]
-    }
+    },
   ]
   const checkMarkIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 stroke-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
@@ -76,35 +168,29 @@ export default function FeatureTable(): JSX.Element {
   const returnIcon = (feature, col: string) => {
     const returnKmkIcon = (stat) => {
       switch (stat) {
-        case 'complete':
+        case Status.complete:
           return checkMarkIcon
-          break
-        case 'underDevelopment':
+        case Status.underDevelopment:
           return terminalIcon
-          break
-        case 'planned':
+        case Status.planned:
           return lightBulbIcon
-          break
       }
     }
     switch (col) {
       case 'kmk':
         return returnKmkIcon(feature.status)
-        break;
       case 'qmk':
         if (feature.qmk) {
           return checkMarkIcon
         } else {
           return xIcon
         }
-        break;
       case 'zmk':
         if (feature.zmk) {
           return checkMarkIcon
         } else {
           return xIcon
         }
-        break;
       default: return
     }
 

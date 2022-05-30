@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
               <div className="flex flex-col py-[1.5rem]">
                 <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Official Flashing Program</h3>
                 <div className="flex w-[8.5rem]">
-                  <a className='flex' href="#">
+                  <a className='flex' href="https://peg.software/">
                     <PegLogo />
                     <span className="ml-1">
                       <ShareIcon />
@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
               <div className="flex flex-col justify-center py-[1rem]">
                 <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Works Out of The Box</h3>
                 <div className="flex w-[7.5rem]">
-                  <a className='flex' href="#">
+                  <a className='flex' href="https://boardsource.xyz/store/628b95b494dfa308a6581622">
                     <BlokLogo />
                     <span className="ml-1">
                       <ShareIcon />
