@@ -9,7 +9,7 @@ const config = {
   title: 'KMK',
   tagline: 'Clackety Keyboards Powered by Python',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/kmk_website/',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'log',
   favicon: 'img/favicon.svg',

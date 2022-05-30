@@ -15,7 +15,7 @@
     "update": "node site-update.js",
     "setup": "node site-setup.js",
     "typecheck": "tsc",
-    "copy": "cp -r build/ ../build"
+    "copy": "cp -r build/ ../docs"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.20",
