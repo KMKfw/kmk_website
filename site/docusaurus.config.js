@@ -82,7 +82,13 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        logo: {
+          alt: 'Facebook Open Source Logo',
+          src: 'img/kmk_logo.svg',
+          width: 160,
+          height: 51,
+        },
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -116,7 +122,11 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()}`,
+        copyright: `Copyright © ${new Date().getFullYear()} KMKfw`,
+      },
+      colorMode: {
+        respectPrefersColorScheme: true,
+        disableSwitch: true
       },
       prism: {
         theme: lightCodeTheme,

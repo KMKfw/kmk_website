@@ -22,52 +22,47 @@ export default function Home(): JSX.Element {
         <main>
           <div className="bg-base-200">
             <div className="container flex flex-col w-full items-center py-[8rem]">
-              <div className="w-[50%]">
+              <div className="w-[60%] md:w-[50%]">
                 <img src="./img/kmk_logo.svg" alt="kmk logo" />
               </div>
               <h2 className='font-thin mt-[5rem] mb-[1.5rem]'>Keyboard Firmware Powered By Python</h2>
-              <div className="flex items-center">
+              <div className="flex items-center flex-col sm:flex-row">
                 <Link
                   to="/docs/Getting_Started/">
-                  <button className="btn btn-success btn-outline mr-4">
+                  <button className="btn btn-success btn-outline sm:mr-4 btn-sm md:btn-normal mb-2 sm:mb-0">
                     Getting Started
                   </button>
                 </Link>
                 <Link
                   to="/docs/Officially_Supported_Microcontrollers/">
-                  <button className="btn btn-outline mr-4">
+                  <button className="btn btn-outline sm:mr-4 btn-sm md:btn-normal mb-2 sm:mb-0">
                     Compatible Controllers
                   </button>
                 </Link>
-                <iframe src="https://ghbtns.com/github-btn.html?user=KMKfw&repo=kmk_firmware&type=star&count=true" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=KMKfw&repo=kmk_firmware&type=star&count=true" scrolling="0" width="90" height="20" title="GitHub"></iframe>
+
               </div>
             </div>
           </div>
           <div className="sticky-top top-0 bg-gray-700" data-theme='dark'>
-            <div className="container flex justify-around">
-              <div className="flex flex-col py-[1.5rem]">
+            <div className="container flex flex-col sm:flex-row justify-between md:justify-around">
+              <div className="flex sm:flex-col justify-between sm:justify-center py-[1.5rem] items-center sm:items-start">
                 <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Official Flashing Program</h3>
-                <div className="flex w-[8.5rem]">
-                  <a className='flex' href="https://peg.software/">
-                    <PegLogo />
-                    <span className="ml-1">
-                      <ShareIcon />
-                    </span>
-                  </a>
-
-                </div>
+                <a className='flex w-[8.5rem] flex' href="https://peg.software/">
+                  <PegLogo />
+                  <span className="ml-1">
+                    <ShareIcon />
+                  </span>
+                </a>
               </div>
-              <div className="flex flex-col justify-center py-[1rem]">
+              <div className="flex sm:flex-col justify-between sm:justify-center py-[1.5rem] items-center sm:items-start">
                 <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Works Out of The Box</h3>
-                <div className="flex w-[7.5rem]">
-                  <a className='flex' href="https://boardsource.xyz/store/628b95b494dfa308a6581622">
-                    <BlokLogo />
-                    <span className="ml-1">
-                      <ShareIcon />
-                    </span>
-                  </a>
-
-                </div>
+                <a className='flex w-[7.5rem]' href="https://boardsource.xyz/store/628b95b494dfa308a6581622">
+                  <BlokLogo />
+                  <span className="ml-1">
+                    <ShareIcon />
+                  </span>
+                </a>
               </div>
               {/* <div className="flex items-center py-[1rem]">
                 <button className='btn btn-outline outline outline-[white] outline-1 outline-solid'><a className='link text-white no-underline' href="#">View All Compatible Devices</a></button>
@@ -76,8 +71,8 @@ export default function Home(): JSX.Element {
             </div>
 
           </div>
-          <div className="">
-            <div className="container mx-auto pt-[5rem]">
+          <div className="mb-[4rem]">
+            <div className="container mx-auto pt-[4rem] sm:pt-[5rem]">
               <h3 className='text-center font-light text-[3.5rem] mb-[3rem] font-sans' style={{ color: 'var(--ifm-color-primary-lighter)' }}>
                 Features
               </h3>
@@ -210,6 +205,16 @@ export default function Home(): JSX.Element {
 
 
 
+
+          </div>
+          <div className="container mx-auto flex justify-center flex-col items-center mb-[5rem]">
+            <h3 className='font-light text-[3.5rem] mb-2 font-sans text-center' style={{ color: 'var(--ifm-color-primary-lighter)' }}>The easiest to use keyboard firmware.</h3>
+            <Link
+              to="/docs/Getting_Started/">
+              <button className="btn btn-outline mt-[3rem]">
+                Getting Started
+              </button>
+            </Link>
 
           </div>
           {/* <HomepageFeatures /> */}
