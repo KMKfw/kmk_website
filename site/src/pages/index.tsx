@@ -22,10 +22,10 @@ export default function Home(): JSX.Element {
         <main>
           <div className="bg-base-200">
             <div className="container flex flex-col w-full items-center py-[8rem]">
-              <div className="w-[60%] md:w-[50%]">
+              <div className="w-[70%] md:w-[50%]">
                 <img src="./img/kmk_logo.svg" alt="kmk logo" />
               </div>
-              <h2 className='font-thin mt-[5rem] mb-[1.5rem]'>Keyboard Firmware Powered By Python</h2>
+              <h2 className='mt-[5rem] mb-[1.5rem] font-sans font-normal text-[1.95rem] md:text-[1.75rem] text-center '>Keyboard Firmware Powered By Python</h2>
               <div className="flex items-center flex-col sm:flex-row">
                 <Link
                   to="/docs/Getting_Started/">
@@ -48,8 +48,10 @@ export default function Home(): JSX.Element {
             <div className="container flex flex-col sm:flex-row justify-between md:justify-around">
               <div className="flex sm:flex-col justify-between sm:justify-center py-[1.5rem] items-center sm:items-start">
                 <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Official Flashing Program</h3>
-                <a className='flex w-[8.5rem] flex' href="https://peg.software/">
-                  <PegLogo />
+                <a className='flex flex' href="https://peg.software/">
+                  <div className=" w-[8.5rem]">
+                    <PegLogo />
+                  </div>
                   <span className="ml-1">
                     <ShareIcon />
                   </span>
@@ -57,8 +59,11 @@ export default function Home(): JSX.Element {
               </div>
               <div className="flex sm:flex-col justify-between sm:justify-center py-[1.5rem] items-center sm:items-start">
                 <h3 className='font-sans font-normal text-[1.4rem] text-slate-200 mb-2'>Works Out of The Box</h3>
-                <a className='flex w-[7.5rem]' href="https://boardsource.xyz/store/628b95b494dfa308a6581622">
-                  <BlokLogo />
+                <a className='flex' href="https://boardsource.xyz/store/628b95b494dfa308a6581622">
+                  <div className="w-[7.5rem]">
+                    <BlokLogo />
+                  </div>
+
                   <span className="ml-1">
                     <ShareIcon />
                   </span>
