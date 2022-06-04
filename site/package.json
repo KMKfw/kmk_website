@@ -15,7 +15,7 @@
     "update": "node site-update.js",
     "setup": "node site-setup.js",
     "typecheck": "tsc",
-    "copy": "cp -r build/ ../docs"
+    "copy": "cp -r build/ ../docs&&touch ../docs/CNAME&& echo kmkfw.io>>../docs/CNAME"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.20",
