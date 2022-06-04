@@ -85,7 +85,7 @@ export default function FeatureTable(): JSX.Element {
           status: Status.complete,
           kmk: true,
           qmk: true,
-          zmk: false,
+          zmk: true,
         },
         {
           name: 'OLED Display Support',
@@ -118,14 +118,14 @@ export default function FeatureTable(): JSX.Element {
           status: Status.complete,
           kmk: true,
           qmk: false,
-          zmk: false,
+          zmk: true,
         },
         {
-          name: 'CTRL GUI Swap',
+          name: 'Easy Built-in CTRL GUI Swap',
           status: Status.complete,
           kmk: true,
-          qmk: false,
-          zmk: false,
+          qmk: true,
+          zmk: true,
         },
         {
           name: 'ADNS9800 Optical Sensor',
