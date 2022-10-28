@@ -22,6 +22,29 @@ exec('cp -a ../kmk_firmware/docs/. ./docs/', (err, stdout, stderr) => {
     }
 });
 
+exec('cp -a ../kmk_firmware/docs/en/. ./docs/', (err, stdout, stderr) => {
+    if (err) {
+        //some err occurred
+        console.error(err)
+    } else {
+        // the *entire* stdout and stderr (buffered)
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    }
+});
+
+exec('rm -rf ./docs/en', (err, stdout, stderr) => {
+    if (err) {
+        //some err occurred
+        console.error(err)
+    } else {
+        // the *entire* stdout and stderr (buffered)
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    }
+});
+
+
 const renameFolders = (currPath, newPath) => {
     try {
         fs.renameSync(currPath, newPath)
