@@ -234,7 +234,7 @@ export default function FeatureTable(): JSX.Element {
               </tr>
               {feature.individualFeatures.map((individualFeature, key) =>
                 <tr className='' key={key}>
-                  <td className='text-left font-light collapse break-words'>{individualFeature.name}</td>
+                  <td className='text-left font-light break-words'>{individualFeature.name}</td>
                   <td className='w-[5rem] text-center'>{returnIcon(individualFeature, 'kmk')}</td>
                   <td className='w-[5rem] text-center'>{returnIcon(individualFeature, 'qmk')}</td>
                   <td className='w-[5rem] text-center'>{returnIcon(individualFeature, 'zmk')}</td>
