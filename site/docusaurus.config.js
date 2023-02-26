@@ -103,12 +103,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Matrix server',
-                href: 'https://matrix.to/#/#kmkfw:klar.sh',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/QBHUUpeGUd',
+                label: 'Zulip Chat',
+                href: 'https://kmkfw.zulipchat.com/',
               },
             ],
           },
