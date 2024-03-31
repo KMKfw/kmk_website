@@ -1,0 +1,2055 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kmkfw.io/rgb/">
+      
+      
+        <link rel="prev" href="../rapidfire/">
+      
+      
+        <link rel="next" href="../scanners/">
+      
+      
+      <link rel="icon" href="../img/kmk_favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>RGB/Underglow/NeoPixel - KMKfw</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rgbunderglowneopixel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KMKfw" class="md-header__button md-logo" aria-label="KMKfw" data-md-component="logo">
+      
+  <img src="../img/kmk_logo_nav.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KMKfw
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RGB/Underglow/NeoPixel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KMKfw/kmk_firmware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KMK: Clackety Keyboards Powered by Python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KMKfw" class="md-nav__button md-logo" aria-label="KMKfw" data-md-component="logo">
+      
+  <img src="../img/kmk_logo_nav.svg" alt="logo">
+
+    </a>
+    KMKfw
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KMKfw/kmk_firmware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KMK: Clackety Keyboards Powered by Python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting_Started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Officially_Supported_Microcontrollers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Officially supported microcontrollers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adns9800/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADNS9800
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ble_hid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BLE HID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    boot.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capsword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CapsWord
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cg_swap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ctrl GUI Swap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combo_layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combo Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_and_keymap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring KMK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamic_sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easypoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AS5013 (aka 'EasyPoint')
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encoder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encoder module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension_statusled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status LEDs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension_stringy_keymaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stringy Keymaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flashing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flashing Instructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwiring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handwire keyboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../holdtap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HoldTap Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../international/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmkpython_vs_circuitpython/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KMKPython
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../led/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LED (Mono color backlight)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lock_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../media_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Media Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MIDI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mouse keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oneshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OneShot Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peg_oled_display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peg OLED Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peg_rgb_matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peg RGB Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pimoroni_trackball/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pimoroni Trackball
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../porting_to_kmk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porting to KMK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power(save)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickpin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickpin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rapidfire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RapidFire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    RGB/Underglow/NeoPixel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    RGB/Underglow/NeoPixel
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#circuitpython" class="md-nav__link">
+    <span class="md-ellipsis">
+      CircuitPython
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CircuitPython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-the-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling the extension
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keycodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Keycodes]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-animation-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Animation Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direct-variable-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct variable access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Modification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incorrect-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorrect colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lights-dont-turn-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lights don't turn on
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-led-chipsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate LED chipsets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternate LED chipsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-pixelbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple PixelBuffer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scanners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scanners
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serialace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serial ACE (Arbitrary Code Execution over serial interface)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../split_keyboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Split Keyboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../steno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Steno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sticky_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sticky Mod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string_substitution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    String Substitution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tapdance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tap Dance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#circuitpython" class="md-nav__link">
+    <span class="md-ellipsis">
+      CircuitPython
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CircuitPython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-the-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling the extension
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keycodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      [Keycodes]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-animation-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Animation Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direct-variable-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct variable access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Modification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incorrect-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorrect colors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lights-dont-turn-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lights don't turn on
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-led-chipsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate LED chipsets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternate LED chipsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-pixelbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple PixelBuffer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="rgbunderglowneopixel">RGB/Underglow/NeoPixel</h1>
+<p>Want your keyboard to shine? Add some lights!</p>
+<h2 id="circuitpython">CircuitPython</h2>
+<p>This does require the <a href="https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel/blob/main/neopixel.py">NeoPixel library from Adafruit</a>.
+It is part of the <a href="https://github.com/adafruit/Adafruit_CircuitPython_Bundle">Adafruit CircuitPython Bundle</a>.
+Simply put this in the "root" of your CircuitPython device. If unsure, it's the folder with <code>main.py</code> in it, and should be the first folder you see when you open the device.</p>
+<p>Currently we support the following addressable LEDs:</p>
+<ul>
+<li>WS2811, WS2812, WS2812B, WS2812C, etc.</li>
+<li>SK6812, SK6812MINI, SK6805</li>
+</ul>
+<h3 id="color-selection">Color Selection</h3>
+<p>KMK uses <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">Hue, Saturation, and Value</a> to select colors rather than RGB. The color wheel below demonstrates how this works.</p>
+<p>Changing the <strong>Hue</strong> cycles around the circle.
+Changing the <strong>Saturation</strong> moves between the inner and outer sections of the wheel, affecting the intensity of the color.
+Changing the <strong>Value</strong> sets the overall brightness.</p>
+<h2 id="enabling-the-extension">Enabling the extension</h2>
+<p>The only required values that you need to give the RGB extension would be the board pin for the data line, and the number of pixels/LED's. If using a split keyboard, this number is per side, and not the total of both sides.</p>
+<pre><code class="language-python">import board
+from kmk.extensions.RGB import RGB
+
+rgb = RGB(pixel_pin=board.GP14, num_pixels=27)
+keyboard.extensions.append(rgb)
+</code></pre>
+<h2 id="keycodes">[Keycodes]</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KC.RGB_TOG</code></td>
+<td></td>
+<td>Toggles RGB</td>
+</tr>
+<tr>
+<td><code>KC.RGB_HUI</code></td>
+<td></td>
+<td>Increase Hue</td>
+</tr>
+<tr>
+<td><code>KC.RGB_HUD</code></td>
+<td></td>
+<td>Decrease Hue</td>
+</tr>
+<tr>
+<td><code>KC.RGB_SAI</code></td>
+<td></td>
+<td>Increase Saturation</td>
+</tr>
+<tr>
+<td><code>KC.RGB_SAD</code></td>
+<td></td>
+<td>Decrease Saturation</td>
+</tr>
+<tr>
+<td><code>KC.RGB_VAI</code></td>
+<td></td>
+<td>Increase Value</td>
+</tr>
+<tr>
+<td><code>KC.RGB_VAD</code></td>
+<td></td>
+<td>Decrease Value</td>
+</tr>
+<tr>
+<td><code>KC.RGB_ANI</code></td>
+<td></td>
+<td>Increase animation speed</td>
+</tr>
+<tr>
+<td><code>KC.RGB_AND</code></td>
+<td></td>
+<td>Decrease animation speed</td>
+</tr>
+<tr>
+<td><code>KC.RGB_MODE_PLAIN</code></td>
+<td><code>RGB_M_P</code></td>
+<td>Static RGB</td>
+</tr>
+<tr>
+<td><code>KC.RGB_MODE_BREATHE</code></td>
+<td><code>RGB_M_B</code></td>
+<td>Breathing animation</td>
+</tr>
+<tr>
+<td><code>KC.RGB_MODE_RAINBOW</code></td>
+<td><code>RGB_M_R</code></td>
+<td>Rainbow animation</td>
+</tr>
+<tr>
+<td><code>KC.RGB_MODE_BREATHE_RAINBOW</code></td>
+<td><code>RGB_M_BR</code></td>
+<td>Breathing rainbow animation</td>
+</tr>
+<tr>
+<td><code>KC.RGB_MODE_KNIGHT</code></td>
+<td><code>RGB_M_K</code></td>
+<td>Knight Rider animation</td>
+</tr>
+<tr>
+<td><code>KC.RGB_MODE_SWIRL</code></td>
+<td><code>RGB_M_S</code></td>
+<td>Swirl animation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration">Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Define</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rgb.num_pixels</code></td>
+<td></td>
+<td>The number of LEDs connected</td>
+</tr>
+<tr>
+<td><code>rgb.rgb_order</code></td>
+<td><code>(1, 0, 2)</code></td>
+<td>The order of the pixels R G B, and optionally white. Example(1, 0, 2, 3)</td>
+</tr>
+<tr>
+<td><code>rgb.hue_step</code></td>
+<td><code>10</code></td>
+<td>The number of steps to cycle through the hue by</td>
+</tr>
+<tr>
+<td><code>rgb.sat_step</code></td>
+<td><code>17</code></td>
+<td>The number of steps to change the saturation by</td>
+</tr>
+<tr>
+<td><code>rgb.val_step</code></td>
+<td><code>17</code></td>
+<td>The number of steps to change the brightness by</td>
+</tr>
+<tr>
+<td><code>rgb.hue_default</code></td>
+<td><code>0</code></td>
+<td>The default hue when the keyboard boots</td>
+</tr>
+<tr>
+<td><code>rgb.sat_default</code></td>
+<td><code>255</code></td>
+<td>The default saturation when the keyboard boots</td>
+</tr>
+<tr>
+<td><code>rgb.val_default</code></td>
+<td><code>255</code></td>
+<td>The default value (brightness) when the keyboard boots</td>
+</tr>
+<tr>
+<td><code>rgb.val_limit</code></td>
+<td><code>255</code></td>
+<td>The maximum brightness level</td>
+</tr>
+</tbody>
+</table>
+<h2 id="built-in-animation-configuration">Built-in Animation Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Define</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rgb.breathe_center</code></td>
+<td><code>1.5</code></td>
+<td>Used to calculate the curve for the breathing animation. Anywhere from 1.0 - 2.7 is valid</td>
+</tr>
+<tr>
+<td><code>rgb.knight_effect_length</code></td>
+<td><code>4</code></td>
+<td>The number of LEDs to light up for the "Knight" animation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<p>If you want to create your own animations, or for example, change the lighting in a macro, or a layer switch, here are some functions that are available.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rgb.set_hsv_fill(hue, sat, val)</code></td>
+<td>Fills all LED's with HSV values</td>
+</tr>
+<tr>
+<td><code>rgb.set_hsv(hue, sat, val, index)</code></td>
+<td>Sets a single LED with HSV value</td>
+</tr>
+<tr>
+<td><code>rgb.set_rgb_fill((r, g, b))</code></td>
+<td>Fills all LED's with RGB(W) values</td>
+</tr>
+<tr>
+<td><code>rgb.set_rgb((r, g, b), index)</code></td>
+<td>Set's a single LED with RGB(W) values</td>
+</tr>
+<tr>
+<td><code>rgb.increase_hue(step)</code></td>
+<td>Increases hue by a given step</td>
+</tr>
+<tr>
+<td><code>rgb.decrease_hue(step)</code></td>
+<td>Decreases hue by a given step</td>
+</tr>
+<tr>
+<td><code>rgb.increase_sat(step)</code></td>
+<td>Increases saturation by a given step</td>
+</tr>
+<tr>
+<td><code>rgb.decrease_sat(step)</code></td>
+<td>Decreases saturation by a given step</td>
+</tr>
+<tr>
+<td><code>rgb.increase_val(step)</code></td>
+<td>Increases value (brightness) by a given step</td>
+</tr>
+<tr>
+<td><code>rgb.decrease_val(step)</code></td>
+<td>Decreases value (brightness) by a given step</td>
+</tr>
+<tr>
+<td><code>rgb.increase_ani()</code></td>
+<td>Increases animation speed by 1. Maximum 10</td>
+</tr>
+<tr>
+<td><code>rgb.decrease_ani()</code></td>
+<td>Decreases animation speed by 1. Minimum 10</td>
+</tr>
+<tr>
+<td><code>rgb.off()</code></td>
+<td>Turns all LED's off</td>
+</tr>
+<tr>
+<td><code>rgb.show()</code></td>
+<td>Displays all stored configuration for LED's</td>
+</tr>
+</tbody>
+</table>
+<h2 id="direct-variable-access">Direct variable access</h2>
+<table>
+<thead>
+<tr>
+<th>Define</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rgb.hue</code></td>
+<td><code>0</code></td>
+<td>Sets the hue from 0-255</td>
+</tr>
+<tr>
+<td><code>rgb.sat</code></td>
+<td><code>255</code></td>
+<td>Sets the saturation from 0-255</td>
+</tr>
+<tr>
+<td><code>rgb.val</code></td>
+<td><code>255</code></td>
+<td>Sets the brightness from 0-255</td>
+</tr>
+<tr>
+<td><code>rgb.reverse_animation</code></td>
+<td><code>False</code></td>
+<td>If true, some animations will run in reverse. Can be safely used in user animations</td>
+</tr>
+<tr>
+<td><code>rgb.animation_mode</code></td>
+<td><code>static</code></td>
+<td>This can be changed to any modes included, or to something custom for user animations. Any string is valid</td>
+</tr>
+<tr>
+<td><code>rgb.animation_speed</code></td>
+<td><code>1</code></td>
+<td>Increases animation speed of most animations. Recommended 1-5, Maximum 10.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">from kmk.extensions.rgb import AnimationModes
+rgb = RGB(pixel_pin=rgb_pixel_pin,
+        num_pixels=27
+        val_limit=100,
+        hue_default=0,
+        sat_default=100,
+        rgb_order=(1, 0, 2),  # GRB WS2812
+        val_default=100,
+        hue_step=5,
+        sat_step=5,
+        val_step=5,
+        animation_speed=1,
+        breathe_center=1,  # 1.0-2.7
+        knight_effect_length=3,
+        animation_mode=AnimationModes.STATIC,
+        reverse_animation=False,
+        refresh_rate=60,
+        )
+</code></pre>
+<h2 id="hardware-modification">Hardware Modification</h2>
+<p>To add RGB LED's to boards that don't support them directly, you will have to
+add a 3 wires. The power wire will run on 3.3v or 5v (depending on the LED),
+ground, and data pins will need added to an unused pin on your microcontroller
+unless your keyboard has specific solder points for them. With those 3 wires
+connected, set the <code>pixel_pin</code> as described above, and you are ready to use your
+RGB LED's/NeoPixel.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="incorrect-colors">Incorrect colors</h3>
+<p>If your colors are incorrect, check the pixel order of your specific LED's. Here are some common ones.
+ * WS2811, WS2812, WS2812B, WS2812C are all GRB (1, 0, 2)
+ * SK6812, SK6812MINI, SK6805 are all GRB (1, 0, 2)
+ * NeoPixels will vary depending on which one you buy. It will be listed on the product page.</p>
+<h3 id="lights-dont-turn-on">Lights don't turn on</h3>
+<p>Make sure that your board supports LED backlight by checking for a line with
+<code>PIXEL_PIN</code>. If it does not, you can add it to your keymap.  If you added the
+LED's yourself, you will also need to set <code>num_pixels</code> to the number of
+installed LED's in total.</p>
+<h2 id="alternate-led-chipsets">Alternate LED chipsets</h2>
+<p>Not all RGB LEDs are compatible with NeoPixels. To support these, the RGB
+extension accepts an instance of a <code>Pixelbuf</code>-compatible object as an optional
+parameter. If supplied, <code>pixel_pin</code> is ignored and the supplied <code>Pixelbuf</code> is
+used instead of creating a NeoPixel object.
+The RGB extension will figure out LED count from the pixel buffer length if not
+passed explicitly.</p>
+<p>This works easily with APA102 ("DotStar") LEDs, but for most other RGB LED
+chipsets you will need to provide a wrapper to match the expected interface.</p>
+<p>A simple example using APA102:</p>
+<pre><code class="language-python">import adafruit_dotstar
+from kmk.extensions.RGB import RGB
+from kb import rgb_pixel_pin  # This can be imported or defined manually
+
+_LED_COUNT=12
+pixels = adafruit_dotstar.DotStar(board.SCK, board.MOSI, _LED_COUNT)
+
+rgb = RGB(pixel_pin=None, pixels=pixels)
+keyboard.extensions.append(rgb)
+</code></pre>
+<h3 id="multiple-pixelbuffer">Multiple PixelBuffer</h3>
+<p>Similar to alternate drivers, the RGB module supports passing multiple <code>Pixelbuf</code>
+objects as an iterable.</p>
+<pre><code class="language-python">from kmk.extensions.RGB import RGB
+
+pixels = (
+    Neopixel(...),
+    DotStar(...),
+    CustomPixelBuf(...)
+)
+
+rgb = RGB(pixel_pin=None, pixels=pixels)
+keyboard.extensions.append(rgb)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

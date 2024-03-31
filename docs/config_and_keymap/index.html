@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://kmkfw.io/">
+        <link rel="canonical" href="https://kmkfw.io/config_and_keymap/">
       
       
+        <link rel="prev" href="../combos/">
       
-        <link rel="next" href="Display/">
+      
+        <link rel="next" href="../contributing/">
       
       
-      <link rel="icon" href="img/kmk_favicon.svg">
+      <link rel="icon" href="../img/kmk_favicon.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>KMKfw</title>
+        <title>Configuring KMK - KMKfw</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation-index" class="md-skip">
+        <a href="#configuring-kmk" class="md-skip">
           Skip to content
         </a>
       
@@ -86,9 +88,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="KMKfw" class="md-header__button md-logo" aria-label="KMKfw" data-md-component="logo">
+    <a href=".." title="KMKfw" class="md-header__button md-logo" aria-label="KMKfw" data-md-component="logo">
       
-  <img src="img/kmk_logo_nav.svg" alt="logo">
+  <img src="../img/kmk_logo_nav.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documentation index
+              Configuring KMK
             
           </span>
         </div>
@@ -192,9 +194,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="KMKfw" class="md-nav__button md-logo" aria-label="KMKfw" data-md-component="logo">
+    <a href=".." title="KMKfw" class="md-nav__button md-logo" aria-label="KMKfw" data-md-component="logo">
       
-  <img src="img/kmk_logo_nav.svg" alt="logo">
+  <img src="../img/kmk_logo_nav.svg" alt="logo">
 
     </a>
     KMKfw
@@ -218,30 +220,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Documentation index
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -250,86 +232,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#peripherals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Peripherals
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extensions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#language-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Language versions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -341,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Display/" class="md-nav__link">
+      <a href="../Display/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Getting_Started/" class="md-nav__link">
+      <a href="../Getting_Started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -381,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Officially_Supported_Microcontrollers/" class="md-nav__link">
+      <a href="../Officially_Supported_Microcontrollers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -401,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="adns9800/" class="md-nav__link">
+      <a href="../adns9800/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ble_hid/" class="md-nav__link">
+      <a href="../ble_hid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="boot/" class="md-nav__link">
+      <a href="../boot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="capsword/" class="md-nav__link">
+      <a href="../capsword/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cg_swap/" class="md-nav__link">
+      <a href="../cg_swap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combo_layers/" class="md-nav__link">
+      <a href="../combo_layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combos/" class="md-nav__link">
+      <a href="../combos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,10 +440,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="config_and_keymap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -550,6 +461,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -561,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="debugging/" class="md-nav__link">
+      <a href="../debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_sequences/" class="md-nav__link">
+      <a href="../dynamic_sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="easypoint/" class="md-nav__link">
+      <a href="../easypoint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="encoder/" class="md-nav__link">
+      <a href="../encoder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extension_statusled/" class="md-nav__link">
+      <a href="../extension_statusled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extension_stringy_keymaps/" class="md-nav__link">
+      <a href="../extension_stringy_keymaps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="extensions/" class="md-nav__link">
+      <a href="../extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="flashing/" class="md-nav__link">
+      <a href="../flashing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -741,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="handwiring/" class="md-nav__link">
+      <a href="../handwiring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="holdtap/" class="md-nav__link">
+      <a href="../holdtap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="international/" class="md-nav__link">
+      <a href="../international/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="keycodes/" class="md-nav__link">
+      <a href="../keycodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="keys/" class="md-nav__link">
+      <a href="../keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kmkpython_vs_circuitpython/" class="md-nav__link">
+      <a href="../kmkpython_vs_circuitpython/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="layers/" class="md-nav__link">
+      <a href="../layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -881,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="led/" class="md-nav__link">
+      <a href="../led/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lock_status/" class="md-nav__link">
+      <a href="../lock_status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="media_keys/" class="md-nav__link">
+      <a href="../media_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="midi/" class="md-nav__link">
+      <a href="../midi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modules/" class="md-nav__link">
+      <a href="../modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mouse_keys/" class="md-nav__link">
+      <a href="../mouse_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="oneshot/" class="md-nav__link">
+      <a href="../oneshot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="peg_oled_display/" class="md-nav__link">
+      <a href="../peg_oled_display/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="peg_rgb_matrix/" class="md-nav__link">
+      <a href="../peg_rgb_matrix/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pimoroni_trackball/" class="md-nav__link">
+      <a href="../pimoroni_trackball/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="porting_to_kmk/" class="md-nav__link">
+      <a href="../porting_to_kmk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="power/" class="md-nav__link">
+      <a href="../power/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1121,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="quickpin/" class="md-nav__link">
+      <a href="../quickpin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rapidfire/" class="md-nav__link">
+      <a href="../rapidfire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1161,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rgb/" class="md-nav__link">
+      <a href="../rgb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scanners/" class="md-nav__link">
+      <a href="../scanners/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/" class="md-nav__link">
+      <a href="../sequences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="serialace/" class="md-nav__link">
+      <a href="../serialace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1241,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="split_keyboards/" class="md-nav__link">
+      <a href="../split_keyboards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1261,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="steno/" class="md-nav__link">
+      <a href="../steno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sticky_mod/" class="md-nav__link">
+      <a href="../sticky_mod/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1301,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string_substitution/" class="md-nav__link">
+      <a href="../string_substitution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="support/" class="md-nav__link">
+      <a href="../support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tapdance/" class="md-nav__link">
+      <a href="../tapdance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,74 +1286,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Modules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#peripherals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Peripherals
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extensions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extensions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#language-versions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Language versions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1458,59 +1302,99 @@
   
 
 
-<h1 id="documentation-index">Documentation index</h1>
-<p>Before you look further, you probably want to start with our <a href="Getting_Started/">getting started guide</a>.</p>
-<h2 id="basics">Basics</h2>
+<h1 id="configuring-kmk">Configuring KMK</h1>
+<p>KMK is configured through a rather large, plain-old-Python class called
+<code>KMKKeyboard</code>. Subclasses of this configuration exist which pre-fill defaults
+for various known keyboards (for example, many QMK, TMK, or ZMK keyboards 
+are supported with a nice!nano, or through our ItsyBitsy to Pro Micro pinout adapter.) 
+This class is the main interface between end users and the inner workings of KMK. 
+Let's dive in!</p>
 <ul>
-<li><a href="Getting_Started/">Getting Started</a></li>
-<li><a href="ble_hid/">Bluetooth HID</a>: Connect keyboard to PC or mobile device using BLE</li>
-<li><a href="config_and_keymap/">Configuring KMK</a></li>
-<li><a href="porting_to_kmk/">Porting to KMK</a>: Creating a <code>kb.py</code> file for a board</li>
-<li><a href="debugging/">Debugging</a></li>
-<li><a href="keycodes/">Keycodes</a>: List of all available keycodes</li>
-<li><a href="Officially_Supported_Microcontrollers/">Officially supported microcontrollers</a></li>
-<li><a href="support/">Support</a></li>
-<li><a href="contributing/">Contributing</a></li>
+<li>Edit or create a file called <code>main.py</code> on your <code>CIRCUITPY</code> drive. You can also
+  keep this file on your computer (perhaps under <code>user_keymaps</code> - please feel
+  free to submit a pull request with your layout definitions!) and copy it over
+  (either manually or, if you're adept with developer tooling and/or a command
+  line, <a href="../flashing/">our Makefile</a>).</li>
 </ul>
-<h2 id="advanced">Advanced</h2>
+<p>It's definitely recommended to keep a backup of your configuration somewhere
+  that isn't the microcontroller itself - MCUs die, CircuitPython may run into
+  corruption bugs, or you might just have bad luck and delete the wrong file
+  some day.</p>
 <ul>
-<li><a href="flashing/">Flashing instructions</a></li>
-<li><a href="handwiring/">Handwiring</a>: Resources helpful when handwiring a keyboard circuit</li>
-<li><a href="keys/">Keys</a>: Technical explanation of key handling</li>
-<li><a href="scanners/">Scanners</a>: Setting up non-default key reading</li>
+<li>
+<p>Assign a <code>KMKKeyboard</code> instance to a variable (ex. <code>keyboard = KMKKeyboard()</code> - note
+  the parentheses).</p>
+</li>
+<li>
+<p>Make sure this <code>KMKKeyboard</code> instance is actually run at the end of the file with
+  a block such as the following:</p>
+</li>
 </ul>
-<h2 id="modules"><a href="modules/">Modules</a></h2>
+<pre><code class="language-python">if __name__ == '__main__':
+    keyboard.go()
+</code></pre>
 <ul>
-<li><a href="combos/">Combos</a>: Adds chords and sequences</li>
-<li><a href="layers/">Layers</a>: Adds layer support (Fn key) to allow many more keys to be put on your keyboard</li>
-<li><a href="holdtap/">HoldTap</a>: Adds support for augmented modifier keys to act as one key when tapped, and modifier when held.</li>
-<li><a href="mouse_keys/">Mouse keys</a>: Adds mouse keycodes</li>
-<li><a href="oneshot/">OneShot</a>: Adds support for oneshot/sticky keys.</li>
-<li><a href="power/">Power</a>: Power saving features. This is mostly useful when on battery power.</li>
-<li><a href="serialace/">SerialACE</a>: [DANGER - <em>see module README</em>] Arbitrary Code Execution over the data serial.</li>
-<li><a href="split_keyboards/">Split</a>: Keyboards split in two. Seems ergonomic!</li>
-<li><a href="tapdance/">TapDance</a>: Different key actions depending on how often it is pressed.</li>
-<li><a href="steno/">Steno</a>: Communicate with stenography software over serial.</li>
+<li>Assign pins and your diode orientation (only necessary on handwire keyboards),
+  for example:</li>
 </ul>
-<h3 id="peripherals">Peripherals</h3>
+<pre><code class="language-python">import board
+
+from kmk.scanners import DiodeOrientation
+
+col_pins = (board.SCK, board.MOSI, board.MISO, board.RX, board.TX, board.D4)
+row_pins = (board.D10, board.D11, board.D12, board.D13, board.D9, board.D6, board.D5, board.SCL)
+rollover_cols_every_rows = 4
+diode_orientation = DiodeOrientation.COL2ROW
+</code></pre>
+<p>The pins should be based on whatever CircuitPython calls pins on your particular
+board. You can find these in the REPL on your CircuitPython device:</p>
+<pre><code class="language-python">import board
+print(dir(board))
+</code></pre>
+<blockquote>
+<p>Note: <code>rollover_cols_every_rows</code> is only supported with
+<code>DiodeOrientation.COLUMNS</code>/<code>DiodeOrientation.COL2ROW</code>, not <code>DiodeOrientation.ROWS</code>/<code>DiodeOrientation.ROW2COL</code>. It is used for boards
+such as the Planck Rev6 which reuse column pins to simulate a 4x12 matrix in
+the form of an 8x6 matrix</p>
+</blockquote>
 <ul>
-<li><a href="adns9800/">ADNS9800</a>: Controlling ADNS9800 optical sensor</li>
-<li><a href="encoder/">Encoder</a>: Handling rotary encoders</li>
-<li><a href="pimoroni_trackball/">Pimoroni trackball</a>: Handling a small I2C trackball made by Pimoroni</li>
+<li>
+<p>Import the global list of key definitions with <code>from kmk.keys import KC</code>. You
+  can either print this out in the REPL as we did with <code>board</code> above, or simply
+  look at <a href="../keycodes/">our Key documentation</a>.
+  We've tried to keep that listing reasonably up to date, but if it feels like
+  something is missing, you may need to read through <code>kmk/keys.py</code> (and then
+  open a ticket to tell us our docs are out of date, or open a PR and fix the
+  docs yourself!)</p>
+</li>
+<li>
+<p>Define a keymap, which is, in Python terms, a List of Lists of <code>Key</code> objects.
+  A very simple keymap, for a keyboard with just two physical keys on a single
+  layer, may look like this:</p>
+</li>
 </ul>
-<h2 id="extensions"><a href="extensions/">Extensions</a></h2>
+<pre><code class="language-python">keyboard.keymap = [[KC.A, KC.B]]
+</code></pre>
 <ul>
-<li><a href="international/">International</a>: Adds international keycodes</li>
-<li><a href="led/">LED</a>: Adds backlight support. This is for monocolor backlight, not RGB</li>
-<li><a href="lock_status/">LockStatus</a>: Exposes host-side locks like caps or num lock.</li>
-<li><a href="media_keys/">MediaKeys</a>: Adds support for media keys such as volume</li>
-<li><a href="rgb/">RGB</a>: RGB lighting for underglow. Will work on most matrix RGB as will be treated the same as underglow.</li>
-<li><a href="extension_statusled/">Status LED</a>: Indicates which layer you are on with an array of single leds.</li>
+<li>The keymap contains a flat list of <code>Key</code> objects for each layer of the keyboard.
+  The list of keys in each layer are stored as a single list that follows the 
+  grid of row and column pins in the keyboard matrix.  This list starts with keys 
+  in the first row from left to right, then the second row, and so on.<br />
+  The row x column matrix structure doesn't appear explicitly
+  in the keymap.  Use <code>KC.NO</code> to mark grid positions without a physical key.
+  For very sparse grids <code>keyboard.coord_mapping</code> can be useful to avoid <code>KC.NO</code>. </li>
 </ul>
-<h2 id="language-versions">Language versions</h2>
+<p>You can further define a bunch of other stuff:</p>
 <ul>
-<li><a href="https://github.com/KMKfw/kmk_firmware/tree/master/docs/ja/Getting_Started.md">Japanese getting started</a></li>
-<li><a href="https://github.com/KMKfw/kmk_firmware/tree/master/docs/ptBR">Brazilian Portuguese</a></li>
+<li>
+<p><code>keyboard.debug_enabled</code> which will spew a ton of debugging information to the serial
+  console. This is very rarely needed, but can provide very valuable information
+  if you need to open an issue.</p>
+</li>
+<li>
+<p><code>keyboard.tap_time</code> which defines how long <code>KC.TT</code> and <code>KC.LT</code> will wait before
+  considering a key "held" (see <code>layers.md</code>).</p>
+</li>
 </ul>
 
 
@@ -1558,10 +1442,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

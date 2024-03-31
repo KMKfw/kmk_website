@@ -3,6 +3,7 @@ site_url: https://kmkfw.io/
 repo_url: https://github.com/KMKfw/kmk_firmware
 repo_name: "KMK: Clackety Keyboards Powered by Python"
 docs_dir: kmk_firmware/docs/en/
+site_dir: docs
 theme:
   name: material
   logo: img/kmk_logo_nav.svg
