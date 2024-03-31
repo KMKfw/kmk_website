@@ -1,0 +1,12 @@
+site_name: KMKfw
+site_url: https://kmkfw.io/
+repo_url: https://github.com/KMKfw/kmk_firmware
+repo_name: "KMK: Clackety Keyboards Powered by Python"
+docs_dir: kmk_firmware/docs/en/
+theme:
+  name: material
+  logo: kmk_logo_nav.svg
+  favicon: kmk_favicon.svg
+  palette:
+    scheme: slate
+    primary: blue grey
