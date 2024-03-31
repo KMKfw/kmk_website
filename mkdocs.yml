@@ -5,8 +5,8 @@ repo_name: "KMK: Clackety Keyboards Powered by Python"
 docs_dir: kmk_firmware/docs/en/
 theme:
   name: material
-  logo: kmk_logo_nav.svg
-  favicon: kmk_favicon.svg
+  logo: img/kmk_logo_nav.svg
+  favicon: img/kmk_favicon.svg
   palette:
     scheme: slate
     primary: blue grey

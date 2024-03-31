@@ -1,0 +1,1607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kmkfw.io/Getting_Started/">
+      
+      
+        <link rel="prev" href="../Display/">
+      
+      
+        <link rel="next" href="../Officially_Supported_Microcontrollers/">
+      
+      
+      <link rel="icon" href="../kmk_favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Getting Started - KMKfw</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KMKfw" class="md-header__button md-logo" aria-label="KMKfw" data-md-component="logo">
+      
+  <img src="../kmk_logo_nav.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KMKfw
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KMKfw/kmk_firmware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KMK: Clackety Keyboards Powered by Python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KMKfw" class="md-nav__button md-logo" aria-label="KMKfw" data-md-component="logo">
+      
+  <img src="../kmk_logo_nav.svg" alt="logo">
+
+    </a>
+    KMKfw
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KMKfw/kmk_firmware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KMK: Clackety Keyboards Powered by Python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr-quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      TL;DR Quick start guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#now-that-youre-up-and-running-you-may-want-to-go-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now that you're up and running, you may want to go further...
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Now that you're up and running, you may want to go further...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#youre-extremely-lucky-and-you-have-a-fully-supported-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      You're extremely lucky and you have a fully supported keyboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#youve-got-another-maybe-diy-board-and-want-to-customize-kmk-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      You've got another, maybe DIY, board and want to customize KMK for it
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-compiling-kmk-for-faster-boot-times-or-microcontrollers-with-limited-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-compiling KMK for faster boot times or microcontrollers with limited flash
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-help-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional help and support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Officially_Supported_Microcontrollers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Officially supported microcontrollers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adns9800/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADNS9800
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ble_hid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BLE HID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    boot.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capsword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CapsWord
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cg_swap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ctrl GUI Swap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combo_layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combo Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_and_keymap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring KMK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamic_sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easypoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AS5013 (aka 'EasyPoint')
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encoder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encoder module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension_statusled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status LEDs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension_stringy_keymaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stringy Keymaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flashing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flashing Instructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwiring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handwire keyboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../holdtap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HoldTap Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../international/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmkpython_vs_circuitpython/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KMKPython
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../led/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LED (Mono color backlight)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lock_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../media_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Media Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MIDI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mouse keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oneshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OneShot Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peg_oled_display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peg OLED Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peg_rgb_matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peg RGB Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pimoroni_trackball/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pimoroni Trackball
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../porting_to_kmk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porting to KMK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power(save)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickpin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickpin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rapidfire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RapidFire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rgb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RGB/Underglow/NeoPixel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scanners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scanners
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serialace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serial ACE (Arbitrary Code Execution over serial interface)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../split_keyboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Split Keyboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../steno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Steno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sticky_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sticky Mod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string_substitution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    String Substitution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tapdance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tap Dance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr-quick-start-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      TL;DR Quick start guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#now-that-youre-up-and-running-you-may-want-to-go-further" class="md-nav__link">
+    <span class="md-ellipsis">
+      Now that you're up and running, you may want to go further...
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Now that you're up and running, you may want to go further...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#youre-extremely-lucky-and-you-have-a-fully-supported-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      You're extremely lucky and you have a fully supported keyboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#youve-got-another-maybe-diy-board-and-want-to-customize-kmk-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      You've got another, maybe DIY, board and want to customize KMK for it
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-compiling-kmk-for-faster-boot-times-or-microcontrollers-with-limited-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-compiling KMK for faster boot times or microcontrollers with limited flash
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-help-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional help and support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="getting-started">Getting Started</h1>
+<blockquote>
+<p>Life was like a box of chocolates. You never know what you're gonna get.</p>
+</blockquote>
+<p>KMK is a keyboard focused layer that sits on top of <a href="https://circuitpython.org/">CircuitPython</a>. As such, it should work with most <a href="https://circuitpython.org/downloads">boards that support CircuitPython</a>. KMK requires CircuitPython version 7.3 or above.
+Known working and recommended devices can be found in the <a href="../Officially_Supported_Microcontrollers/">list of officially supported microcontrollers</a></p>
+<h2 id="tldr-quick-start-guide">TL;DR Quick start guide</h2>
+<blockquote>
+<p>To infinity and beyond!
+1. <a href="https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython">Install CircuitPython version 7.3 or higher on your board</a>. With most boards, it should be as easy as drag and dropping the firmware on the drive
+2. Get a <a href="https://github.com/KMKfw/kmk_firmware/archive/refs/heads/master.zip">copy of KMK</a> from the master branch 
+3. Unzip it and copy the KMK folder and the boot.py file at the root of the USB drive corresponding to your board (often appearing as CIRCUITPY)
+4. Create a new <em>code.py</em> or <em>main.py</em> file in the same root directory (same level as boot.py) with the example content hereunder: </p>
+</blockquote>
+<p><strong><em>IMPORTANT:</em></strong> adapt the GP0 / GP1 pins to your specific board !</p>
+<pre><code>print(&quot;Starting&quot;)
+
+import board
+
+from kmk.kmk_keyboard import KMKKeyboard
+from kmk.keys import KC
+from kmk.scanners import DiodeOrientation
+
+keyboard = KMKKeyboard()
+
+keyboard.col_pins = (board.GP0,)
+keyboard.row_pins = (board.GP1,)
+keyboard.diode_orientation = DiodeOrientation.COL2ROW
+
+keyboard.keymap = [
+    [KC.A,]
+]
+
+if __name__ == '__main__':
+    keyboard.go()
+</code></pre>
+<ol>
+<li>With a wire / paperclip / whatever, connect the pins you selected for col_pin and row_pin together.</li>
+</ol>
+<p><img alt="feather and keeboar example pins" src="../pins56.jpg" /></p>
+<ol>
+<li>If it prints the letter "a" (or a "Q" or ... depending on your keyboard layout), you're done!</li>
+</ol>
+<h2 id="now-that-youre-up-and-running-you-may-want-to-go-further">Now that you're up and running, you may want to go further...</h2>
+<blockquote>
+<p>This is your last chance. After this, there is no turning back. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember: all I'm offering is the truth. Nothing more.</p>
+</blockquote>
+<h3 id="youre-extremely-lucky-and-you-have-a-fully-supported-keyboard">You're extremely lucky and you have a fully supported keyboard</h3>
+<p>If your keyboard and microcontroller are officially supported, simply visit the page for your files, and dropping them on the root of the "flash drive".
+Those pages can be found in the repositories <a href="https://github.com/KMKfw/kmk_firmware/tree/master/boards">boards folder</a>.
+You will need the <code>kb.py</code> and <code>main.py</code>. If you need more detailed instructions on how to customize the configuration settings and key mappings, please refer to the <a href="../config_and_keymap/">config and keymap</a> documentation.</p>
+<h3 id="youve-got-another-maybe-diy-board-and-want-to-customize-kmk-for-it">You've got another, maybe DIY, board and want to customize KMK for it</h3>
+<p>First, be sure to understand how your device work, and particularly its specific matrix configuration. You can have a look at <a href="http://pcbheaven.com/wikipages/How_Key_Matrices_Works/">how key matrices work</a> or read the <a href="https://docs.qmk.fm/#/hand_wire">guide</a> provided by the QMK team for handwired keyboards
+Once you've got the gist of it:
+- To start customizing your <code>code.py</code>/<code>main.py</code> file, please refer to the <a href="../config_and_keymap/">config and keymap</a> and <a href="../keys/">keys</a> files respectively, which provide detailed instructions on how to modify the configuration settings and key mappings.
+- There's a <a href="../keycodes/">reference</a> of the available keycodes
+- <a href="../international/">International</a> extension adds keys for non US layouts and <a href="../media_keys/">Media Keys</a> adds keys for ... media</p>
+<p>And to go even further:
+- <a href="../sequences/">Sequences</a> are used for sending multiple keystrokes in a single action
+- <a href="../layers/">Layers</a> can transform the whole way your keyboard is behaving with a single touch
+- <a href="../holdtap/">HoldTap</a> allow you to customize the way a key behaves whether it is tapped or hold, and <a href="../tapdance/">TapDance</a> depending on the number of times it is pressed</p>
+<p>Want to have fun features such as RGB, split keyboards and more? Check out what builtin <a href="../modules/">modules</a> and <a href="../extensions/">extensions</a> can do!
+You can also get ideas from the various <a href="https://github.com/KMKfw/kmk_firmware/tree/master/user_keymaps">user examples</a> that we provide and dig into our <a href="../">documentation</a>.</p>
+<h3 id="pre-compiling-kmk-for-faster-boot-times-or-microcontrollers-with-limited-flash">Pre-compiling KMK for faster boot times or microcontrollers with limited flash</h3>
+<p>There are two options:
+1. To compile KMK yourself you'll need to download and install the <a href="https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/mpy-cross/">compatible mpy-cross</a>
+  for your Operating System. Don't forget to add it to your PATH, test by running <code>mpy-cross</code> from a shell (Powershell, Bash, Fish, etc). Once that's set up, run either <code>make compile</code> (if you have <code>make</code>) or <code>python util/compile.py</code>to generate the <code>.mpy</code> versions of KMK files. Then copy the whole compiled <code>kmk/</code> directory to your keyboard.</p>
+<p>There are even more compile and copy make targets.
+Power user can compile KMK and additional libraries, and then load the bytecode and keyboard code
+onto a keyboard in one go:</p>
+<pre><code class="language-sh">make compile copy-compiled copy-board MPY_SOURCES='kmk/ lib/' BOARD='boards/someboard' MOUNTPOINT='/media/user/someboard'
+</code></pre>
+<ol>
+<li>To download a pre-compiled KMK go to <a href="https://github.com/KMKfw/kmk_firmware/actions/workflows/compile.yml">Actions &gt; Build on the KMK GitHub project page</a>,
+  click on the latest build, and you'll find the download link at the bottom of the page under Artifacts. Unzip the download and place the contents in the <code>kmk/</code> directory on your keyboard.</li>
+</ol>
+<p>On certain microcontrollers that will still not be enough of a size reduction to
+fit all of KMK onto the flash (nice!nano for example).
+You can remove any optional parts of KMK you aren't using.
+Start by skipping <code>kmk/extensions</code>, <code>kmk/modules</code>, and <code>kmk/quickpin</code> and adding in only the files under those paths used in your keyboard (i.e. files that are imported in your <code>main.py</code> or <code>kb.py</code>).</p>
+<h2 id="additional-help-and-support">Additional help and support</h2>
+<blockquote>
+<p>Roads? Where we're going we don't need roads.</p>
+</blockquote>
+<p>In case you need it, debugging help can be found on the <a href="../debugging/">debugging</a> page.</p>
+<p>For asynchronous support and chatter about KMK, <a href="https://kmkfw.zulipchat.com">join our Zulip
+community</a>!</p>
+<p>If you ask for help in chat or open a bug report, if possible
+make sure your copy of KMK is up-to-date.
+In particular, swing by the Zulip chat <em>before</em> opening a GitHub Issue about
+configuration, documentation, etc. concerns.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

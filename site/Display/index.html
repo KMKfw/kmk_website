@@ -1,0 +1,1748 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kmkfw.io/Display/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Getting_Started/">
+      
+      
+      <link rel="icon" href="../kmk_favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Display - KMKfw</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#display" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KMKfw" class="md-header__button md-logo" aria-label="KMKfw" data-md-component="logo">
+      
+  <img src="../kmk_logo_nav.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KMKfw
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Display
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KMKfw/kmk_firmware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KMK: Clackety Keyboards Powered by Python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KMKfw" class="md-nav__button md-logo" aria-label="KMKfw" data-md-component="logo">
+      
+  <img src="../kmk_logo_nav.svg" alt="logo">
+
+    </a>
+    KMKfw
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KMKfw/kmk_firmware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KMK: Clackety Keyboards Powered by Python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Display
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Display
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-and-y-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      X and Y anchors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting_Started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Officially_Supported_Microcontrollers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Officially supported microcontrollers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adns9800/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ADNS9800
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ble_hid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BLE HID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    boot.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../capsword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CapsWord
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cg_swap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ctrl GUI Swap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combo_layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combo Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config_and_keymap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring KMK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dynamic_sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easypoint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AS5013 (aka 'EasyPoint')
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encoder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encoder module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension_statusled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status LEDs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension_stringy_keymaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stringy Keymaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flashing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flashing Instructions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwiring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handwire keyboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../holdtap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HoldTap Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../international/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    International Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmkpython_vs_circuitpython/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KMKPython
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../led/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LED (Mono color backlight)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lock_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lock Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../media_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Media Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../midi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MIDI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mouse keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oneshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OneShot Keycodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peg_oled_display/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peg OLED Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peg_rgb_matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Peg RGB Matrix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pimoroni_trackball/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pimoroni Trackball
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../porting_to_kmk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porting to KMK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power(save)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickpin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickpin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rapidfire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RapidFire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rgb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RGB/Underglow/NeoPixel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scanners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scanners
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serialace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serial ACE (Arbitrary Code Execution over serial interface)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../split_keyboards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Split Keyboards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../steno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Steno
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sticky_mod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sticky Mod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string_substitution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    String Substitution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tapdance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tap Dance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-and-y-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      X and Y anchors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Split
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="display">Display</h1>
+<p>Not enough screen space? Add a display to your keyboard!</p>
+<p>This documentation concerns the recommended Display extension.</p>
+<p><em>Note:</em>
+Driving a display can bind up a considerable amount of CPU time and RAM.
+Be aware of the performance degradation that can occur.</p>
+<h2 id="preparation">Preparation</h2>
+<p>First of all you need to download a few libraries that will make it possible for your display to work.
+You can get them with the <a href="https://circuitpython.org/libraries">Adafruit CircuitPython Libraries bundle</a>.
+Make sure you to choose the one that matches your version of CircuitPython.</p>
+<p>Create a <code>lib</code> directory under the CircuitPython drive and copy the following
+from the library bundle there:
+* <code>adafruit_display_text/</code></p>
+<p>Depending on which kind of display your keyboard has, you may also need a display-specific library. See the below table:</p>
+<table>
+<thead>
+<tr>
+<th>Display Type</th>
+<th>Library to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSD1306</td>
+<td><code>adafruit_displayio_ssd1306.mpy</code></td>
+</tr>
+<tr>
+<td>SH1106</td>
+<td><code>adafruit_displayio_sh1106.mpy</code></td>
+</tr>
+<tr>
+<td>Already initialized (e.g. available through <code>board.DISPLAY</code>)</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration">Configuration</h2>
+<p>Here's how you may initialize the extension. Note that this includes examples of all currently supported display types and you only need the one that corresponds to your display:</p>
+<pre><code class="language-python">import board
+import busio
+
+from kmk.extensions.display import Display, TextEntry, ImageEntry
+
+# For SSD1306
+from kmk.extensions.display.ssd1306 import SSD1306
+
+# Replace SCL and SDA according to your hardware configuration.
+i2c_bus = busio.I2C(board.GP_SCL, board.GP_SDA)
+
+driver = SSD1306(
+    # Mandatory:
+    i2c=i2c_bus,
+    # Optional:
+    device_address=0x3C,
+)
+
+# For SH1106
+from kmk.extensions.display.sh1106 import SH1106
+
+# Replace SCK and MOSI according to your hardware configuration.
+spi_bus = busio.SPI(board.GP_SCK, board.GP_MOSI)
+
+# Replace command, chip_select, and reset according to your hardware configuration.
+driver = SH1106(
+    # Mandatory:
+    spi=spi_bus,
+    command=board.GP_DC,
+    chip_select=board.GP_CS,
+    reset=board.GP_RESET,
+)
+
+# For displays initialized by CircuitPython by default
+# IMPORTANT: breaks if a display backend from kmk.extensions.display is also in use
+from kmk.extensions.display.builtin import BuiltInDisplay
+
+# Replace display, sleep_command, and wake_command according to your hardware configuration.
+driver = BuiltInDisplay(
+    # Mandatory:
+    display=board.DISPLAY
+    sleep_command=0xAE
+    wake_command=0xAF
+)
+
+# For all display types
+display = Display(
+    # Mandatory:
+    display=driver,
+    # Optional:
+    width=128, # screen size
+    height=32, # screen size
+    flip = False, # flips your display content
+    flip_left = False, # flips your display content on left side split
+    flip_right = False, # flips your display content on right side split
+    brightness=0.8, # initial screen brightness level
+    brightness_step=0.1, # used for brightness increase/decrease keycodes
+    dim_time=20, # time in seconds to reduce screen brightness
+    dim_target=0.1, # set level for brightness decrease
+    off_time=60, # time in seconds to turn off screen
+    powersave_dim_time=10, # time in seconds to reduce screen brightness
+    powersave_dim_target=0.1, # set level for brightness decrease
+    powersave_off_time=30, # time in seconds to turn off screen
+)
+</code></pre>
+<p>Also shown are all the options with their default values.
+Customize them to fit your screen and preferences.</p>
+<h2 id="images">Images</h2>
+<p>Images have to be monochromatic bitmaps with same resolution as your display and
+have to be placed in the root of the CircuitPython drive.
+<strong>Placing it in separate a separate directory may cause issues.</strong></p>
+<pre><code class="language-python">display.entries = [
+    ImageEntry(image=&quot;1.bmp&quot;, x=0, y=0),
+]
+keyboard.extensions.append(display)
+</code></pre>
+<p>You can also make your images appear only on specific layers,</p>
+<pre><code class="language-python">display.entries = [
+    ImageEntry(image=&quot;1.bmp&quot;, x=0, y=0, layer=0),
+    ImageEntry(image=&quot;2.bmp&quot;, x=0, y=0, layer=1),
+]
+keyboard.extensions.append(display)
+</code></pre>
+<p>and/or side of your split keyboard.</p>
+<pre><code class="language-python">display.entries = [
+    ImageEntry(image=&quot;L1.bmp&quot;, x=0, y=0, side=&quot;L&quot;),
+    ImageEntry(image=&quot;R1.bmp&quot;, x=0, y=0, side=&quot;R&quot;),
+]
+keyboard.extensions.append(display)
+</code></pre>
+<h2 id="text">Text</h2>
+<p>You're able to freely position your text to place it wherever you want just by changing x and y values.</p>
+<pre><code class="language-python">display.entries = [
+    TextEntry(text=&quot;Layer = 1&quot;, x=0, y=0),
+    TextEntry(text=&quot;Macros&quot;, x=0, y=12),
+    TextEntry(text=&quot;Hey there!&quot;, x=0, y=24),
+]
+keyboard.extensions.append(display)
+</code></pre>
+<h3 id="x-and-y-anchors">X and Y anchors</h3>
+<p>Anchor points define the "origin" or <code>(0, 0)</code> position within a text label.
+Example: for text in top right corner you need to set its anchor points Top Right and move text to far right position.
+The values can be set "T" for top, "M" for middle and "B" for bottom on the X
+axis and "L" for left, "M" for middle and "R, for right on the Y axis.</p>
+<p>For more info about anchors check the <a href="https://learn.adafruit.com/circuitpython-display-support-using-displayio/text">Adafruit docs</a>.
+Notable difference: KMK uses strings ("T", "M","B" and "L", "M", "R") instead of numbers.</p>
+<pre><code class="language-python">display.entries = [
+    TextEntry(text=&quot;Layer = 1&quot;, x=128, y=0, x_anchor=&quot;R&quot;, y_anchor=&quot;T&quot;), # text in Top Right corner
+    TextEntry(text=&quot;Macros&quot;, x=128, y=64, x_anchor=&quot;R&quot;, y_anchor=&quot;B&quot;), # text in Bottom Right corner
+    TextEntry(text=&quot;Hey there!&quot;, x=64, y=32, x_anchor=&quot;M&quot;, y_anchor=&quot;M&quot;), # text in the Middle of screen
+]
+keyboard.extensions.append(display)
+</code></pre>
+<h3 id="split">Split</h3>
+<p>Same as with images you can change displaying according to current layer or side of split keyboard.</p>
+<pre><code class="language-python">display.entries = [
+    TextEntry(text=&quot;Longer text that&quot;, x=0, y=0, layer=0),
+    TextEntry(text=&quot;has been divided&quot;, x=0, y=12, layer=0, side=&quot;L&quot;),
+    TextEntry(text=&quot;for an example&quot;, x=0, y=24, layer=0, side=&quot;R&quot;),
+]
+keyboard.extensions.append(display)
+</code></pre>
+<h3 id="inverting">Inverting</h3>
+<p>Inverts colors of your text. Comes in handy, for example, as a good layer indicator.</p>
+<pre><code class="language-python">display = Display(
+    entries=[
+        TextEntry(text='0 1 2 4', x=0, y=0),
+        TextEntry(text='0', x=0, y=0, inverted=True, layer=0),
+        TextEntry(text='1', x=12, y=0, inverted=True, layer=1),
+        TextEntry(text='2', x=24, y=0, inverted=True, layer=2),
+    ],
+)
+</code></pre>
+<h1 id="example-code">Example Code</h1>
+<pre><code class="language-python">import board
+import busio
+from kmk.kmk_keyboard import KMKKeyboard
+from kmk.keys import KC
+from kmk.scanners import DiodeOrientation
+from kmk.modules.layers import Layers
+from kmk.extensions.display import Display, SSD1306, TextEntry, ImageEntry
+
+keyboard = KMKKeyboard()
+layers = Layers()
+keyboard.modules.append(layers)
+
+i2c_bus = busio.I2C(board.GP21, board.GP20)
+display_driver = SSD1306(
+    i2c=i2c_bus,
+    # Optional device_addres argument. Default is 0x3C.
+    # device_address=0x3C,
+)
+
+display = Display(
+    display=display_driver,
+    entries=[
+        TextEntry(text='Layer: ', x=0, y=32, y_anchor='B'),
+        TextEntry(text='BASE', x=40, y=32, y_anchor='B', layer=0),
+        TextEntry(text='NUM', x=40, y=32, y_anchor='B', layer=1),
+        TextEntry(text='NAV', x=40, y=32, y_anchor='B', layer=2),
+        TextEntry(text='0 1 2', x=0, y=4),
+        TextEntry(text='0', x=0, y=4, inverted=True, layer=0),
+        TextEntry(text='1', x=12, y=4, inverted=True, layer=1),
+        TextEntry(text='2', x=24, y=4, inverted=True, layer=2),
+    ],
+    # Optional width argument. Default is 128.
+    # width=128,
+    height=64,
+    dim_time=10,
+    dim_target=0.2,
+    off_time=1200,
+    brightness=1,
+)
+
+keyboard.extensions.append(display)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
