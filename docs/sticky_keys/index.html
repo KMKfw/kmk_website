@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://kmkfw.io/config_and_keymap/">
+        <link rel="canonical" href="https://kmkfw.io/sticky_keys/">
       
       
-        <link rel="prev" href="../combos/">
+        <link rel="prev" href="../steno/">
       
       
-        <link rel="next" href="../contributing/">
+        <link rel="next" href="../sticky_mod/">
       
       
       <link rel="icon" href="../img/kmk_favicon.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Configuring KMK - KMKfw</title>
+        <title>Sticky Keys - KMKfw</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuring-kmk" class="md-skip">
+        <a href="#sticky-keys" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuring KMK
+              Sticky Keys
             
           </span>
         </div>
@@ -440,19 +440,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../config_and_keymap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +452,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1170,10 +1160,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../sticky_keys/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sticky Keys
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1182,6 +1192,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enable-sticky-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Sticky Keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keycodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keycodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-sticky-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Sticky Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Sticky Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defer_release" class="md-nav__link">
+    <span class="md-ellipsis">
+      defer_release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat_cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      repeat_cancel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sticky-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Stacks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1286,6 +1376,74 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enable-sticky-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Sticky Keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keycodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keycodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-sticky-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Sticky Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Sticky Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defer_release" class="md-nav__link">
+    <span class="md-ellipsis">
+      defer_release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeat_cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      repeat_cancel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sticky-stacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Stacks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1302,100 +1460,65 @@
   
 
 
-<h1 id="configuring-kmk">Configuring KMK</h1>
-<p>KMK is configured through a rather large, plain-old-Python class called
-<code>KMKKeyboard</code>. Subclasses of this configuration exist which pre-fill defaults
-for various known keyboards (for example, many QMK, TMK, or ZMK keyboards 
-are supported with a nice!nano, or through our ItsyBitsy to Pro Micro pinout adapter.) 
-This class is the main interface between end users and the inner workings of KMK. 
-Let's dive in!</p>
-<ul>
-<li>Edit or create a file called <code>main.py</code> on your <code>CIRCUITPY</code> drive. You can also
-  keep this file on your computer (perhaps under <code>user_keymaps</code> - please feel
-  free to submit a pull request with your layout definitions!) and copy it over
-  (either manually or, if you're adept with developer tooling and/or a command
-  line, <a href="../flashing/">our Makefile</a>).</li>
-</ul>
-<p>It's definitely recommended to keep a backup of your configuration somewhere
-  that isn't the microcontroller itself - MCUs die, CircuitPython may run into
-  corruption bugs, or you might just have bad luck and delete the wrong file
-  some day.</p>
-<ul>
-<li>
-<p>Assign a <code>KMKKeyboard</code> instance to a variable (ex. <code>keyboard = KMKKeyboard()</code> - note
-  the parentheses).</p>
-</li>
-<li>
-<p>Make sure this <code>KMKKeyboard</code> instance is actually run at the end of the file with
-  a block such as the following:</p>
-</li>
-</ul>
-<pre><code class="language-python">if __name__ == '__main__':
-    keyboard.go()
+<h1 id="sticky-keys">Sticky Keys</h1>
+<p>Sticky keys enable you to have keys that stay pressed for a certain time or
+until another key is pressed and released.
+If the timeout expires or other keys are pressed, and the sticky key wasn't
+released, it is handled as a regular key being held.
+Sticky keys are sometimes also referred to as "one shot keys".</p>
+<h2 id="enable-sticky-keys">Enable Sticky Keys</h2>
+<pre><code class="language-python">from kmk.modules.sticky_keys import StickyKeys
+sticky_keys = StickyKeys()
+# optional: set a custom release timeout in ms (default: 1000ms)
+# sticky_keys = StickyKeys(release_after=5000)
+keyboard.modules.append(sticky_keys)
 </code></pre>
-<ul>
-<li>Assign pins and your diode orientation (only necessary on handwire keyboards),
-  for example:</li>
-</ul>
-<pre><code class="language-python">import board
+<h2 id="keycodes">Keycodes</h2>
+<table>
+<thead>
+<tr>
+<th>Keycode</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KC.SK(KC.ANY)</code></td>
+<td><code>KC.STICKY</code></td>
+<td>make a sticky version of <code>KC.ANY</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>KC.STICKY</code> accepts any valid key code as argument, including modifiers and KMK
+internal keys like momentary layer shifts.</p>
+<h2 id="custom-sticky-behavior">Custom Sticky Behavior</h2>
+<p>The full sticky key signature is as follows:</p>
+<pre><code class="language-python">KC.SK(
+    KC.ANY,              # the key to made sticky
+    defer_release=False  # when to release the key
+    retap_cancel=True    # repeated tap releases the key
+)
+</code></pre>
+<h3 id="defer_release"><code>defer_release</code></h3>
+<p>If <code>False</code> (default): release sticky key after the first interrupting key
+releases.
+If <code>True</code>: stay sticky until all keys are released. Useful when combined with
+non-sticky modifiers, layer keys, etc...</p>
+<h3 id="repeat_cancel"><code>repeat_cancel</code></h3>
+<p>If <code>True</code> (default): Repeated tap releases the key and refreshes timeout.
+If <code>False</code>: Repeated tap refreshes the timeout.</p>
+<h2 id="sticky-stacks">Sticky Stacks</h2>
+<p>Sticky keys can be stacked, i.e. tapping a sticky key within the release timeout
+of another will reset the timeout off all previously tapped sticky keys and
+"stack" their effects.
+In this example if you tap <code>SK_LCTL</code> and then <code>SK_LSFT</code> followed by <code>KC.TAB</code>,
+the output will be <code>ctrl+shift+tab</code>.</p>
+<pre><code class="language-python">SK_LCTL = KC.SK(KC.LCTL)
+SK_LSFT = KC.SK(KC.LSFT)
 
-from kmk.scanners import DiodeOrientation
-
-col_pins = (board.SCK, board.MOSI, board.MISO, board.RX, board.TX, board.D4)
-row_pins = (board.D10, board.D11, board.D12, board.D13, board.D9, board.D6, board.D5, board.SCL)
-rollover_cols_every_rows = 4
-diode_orientation = DiodeOrientation.COL2ROW
+keyboard.keymap = [[SK_LSFT, SK_LCTL, KC.TAB]]
 </code></pre>
-<p>The pins should be based on whatever CircuitPython calls pins on your particular
-board. You can find these in the REPL on your CircuitPython device:</p>
-<pre><code class="language-python">import board
-print(dir(board))
-</code></pre>
-<blockquote>
-<p>Note: <code>rollover_cols_every_rows</code> is only supported with
-<code>DiodeOrientation.COLUMNS</code>/<code>DiodeOrientation.COL2ROW</code>, not <code>DiodeOrientation.ROWS</code>/<code>DiodeOrientation.ROW2COL</code>. It is used for boards
-such as the Planck Rev6 which reuse column pins to simulate a 4x12 matrix in
-the form of an 8x6 matrix</p>
-</blockquote>
-<ul>
-<li>
-<p>Import the global list of key definitions with <code>from kmk.keys import KC</code>. You
-  can either print this out in the REPL as we did with <code>board</code> above, or simply
-  look at <a href="../keycodes/">our Key documentation</a>.
-  We've tried to keep that listing reasonably up to date, but if it feels like
-  something is missing, you may need to read through <code>kmk/keys.py</code> (and then
-  open a ticket to tell us our docs are out of date, or open a PR and fix the
-  docs yourself!)</p>
-</li>
-<li>
-<p>Define a keymap, which is, in Python terms, a List of Lists of <code>Key</code> objects.
-  A very simple keymap, for a keyboard with just two physical keys on a single
-  layer, may look like this:</p>
-</li>
-</ul>
-<pre><code class="language-python">keyboard.keymap = [[KC.A, KC.B]]
-</code></pre>
-<ul>
-<li>The keymap contains a flat list of <code>Key</code> objects for each layer of the keyboard.
-  The list of keys in each layer are stored as a single list that follows the 
-  grid of row and column pins in the keyboard matrix.  This list starts with keys 
-  in the first row from left to right, then the second row, and so on.<br />
-  The row x column matrix structure doesn't appear explicitly
-  in the keymap.  Use <code>KC.NO</code> to mark grid positions without a physical key.
-  For very sparse grids <code>keyboard.coord_mapping</code> can be useful to avoid <code>KC.NO</code>. </li>
-</ul>
-<p>You can further define a bunch of other stuff:</p>
-<ul>
-<li>
-<p><code>keyboard.debug_enabled</code> which will spew a ton of debugging information to the serial
-  console. This is very rarely needed, but can provide very valuable information
-  if you need to open an issue.</p>
-</li>
-<li>
-<p><code>keyboard.tap_time</code> which defines how long <code>KC.TT</code> and <code>KC.LT</code> will wait before
-  considering a key "held" (see <code>layers.md</code>).</p>
-</li>
-</ul>
 
 
 
