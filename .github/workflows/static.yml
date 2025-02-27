@@ -26,7 +26,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      URL: https://kmkfw.github.io/kmk_website
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
