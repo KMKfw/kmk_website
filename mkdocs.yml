@@ -1,5 +1,5 @@
 site_name: KMKfw
-site_url: https://kmkfw.io/
+site_url: https://kmkfw.github.io/kmk_website
 repo_url: https://github.com/KMKfw/kmk_firmware
 repo_name: "KMK: Clackety Keyboards Powered by Python"
 docs_dir: kmk_firmware/docs/en/
